@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title></title>        
-        <?php include('./libraries/csslibrary.php'); ?>
-        <link rel="stylesheet" href="./css/custom.css">
+        <?php include('./libraries/csslibrary.php'); ?>        
     </head>
     <body>
         <div class="container">
@@ -12,7 +11,7 @@
             <div class="col-md-10">
                 <h1>Wilkommen!</h1>
                 <h3>Bitte anmelden:</h3>
-                <div id="login_controls">
+                <div>
                     <input type="text" class="form-control" id="login_username" placeholder="Benutzername">
                     <input type="password" class="form-control" id="login_password" placeholder="Passwort">
                     <button type="button" class="btn btn-primary Width100 MarTop10" id="login">
