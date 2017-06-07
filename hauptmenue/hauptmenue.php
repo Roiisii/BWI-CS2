@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title></title>        
-        <?php include('./libraries/csslibrary.php'); ?>
-        <link rel="stylesheet" href="./css/custom.css">
-        <?php include('./login/s_isLoggedIn.php'); ?>
+        <?php include('../libraries/csslibrary.php'); ?>        
+        <?php include('../login/s_isLoggedIn.php'); ?>
     </head>
     <body>
         <h1>Wir sind angemeldet!</h1>
@@ -15,7 +14,7 @@
         <?php
         // put your code here
         ?>
-        <?php include('./libraries/jslibrary.php'); ?>      
-        <script src="./login/l_logOut.js"></script>
+        <?php include('../libraries/jslibrary.php'); ?>      
+        <script src="../login/l_logOut.js"></script>
     </body>
 </html>

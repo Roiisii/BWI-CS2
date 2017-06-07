@@ -20,10 +20,11 @@ function login() {
         userName: _userName,
         password: _pass
     }
+    console.log(_loginData);
 
     $.ajax({
         type: "POST",
-        url: "./login/s_login.php",
+        url: "../login/s_login.php",
         dataType: "json",
         data: _loginData,
         cache: false,
@@ -32,7 +33,7 @@ function login() {
                 $('#login_error').html('Benutzername nicht gefunden oder Passwort falsch...<br>').fadeIn();
             }
             if (data.meldung == "OK") {
-                location.href = "./hauptmenue.php";
+                location.href = "../hauptmenue/hauptmenue.php";
             }
 
         },
