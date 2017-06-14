@@ -8,13 +8,13 @@ if (isset($_POST['userName']) === true && empty($_POST['userName']) === false &&
     $_pass = $db->real_escape_string($_POST['password']);
     $username = "";
 
-    $ergebnis = $db->query("SELECT * FROM user WHERE UPPER(name) = '$_userName' AND passwort = '$_pass'");
-
+    $ergebnis = $db->query("SELECT * FROM benutzer WHERE UPPER(benutzername) = '$_userName' AND passwort = '$_pass'");
+    
     if (!$ergebnis) {
         $meldung = mysqli_error($db);
     } else if (mysqli_num_rows($ergebnis) == 1) {
         $row = $ergebnis->fetch_array();
-        $username = $row[1];
+        $username = $row[10];
         $meldung = "OK";
         session_start();
         $_SESSION['login'] = 1;
