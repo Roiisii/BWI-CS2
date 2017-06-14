@@ -6,13 +6,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"> Details zu Bestellschein </h4>
+        <h4 class="modal-title"> Details zu Bestellschein Nr # </h4>
       </div>
       <div class="modal-body">
           
         <p> Bestellschein </p>
-        <input type="text" class="form-control" id="exampleText" placeholder="Text">
-        <input type="text" class="form-control" id="exampleText2" placeholder="Text2">
+        <p id="exampleText"> Nummer </p>
+        <p id="exampleText2"> Date </p>
         
       </div>
       <div class="modal-footer">
