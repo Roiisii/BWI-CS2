@@ -1,0 +1,36 @@
+.regal {
+background-color: #000000;
+/*position: absolute;*/
+height: 10px;
+width: 100%;
+top: 20px;
+}
+
+.regal_top {
+top: 20px;
+}
+
+.regal_middle {
+top: 20px;
+}
+
+.regal_bottom {
+top: 20px;
+}
+
+.gesamt{
+    border: 5px solid red;
+}
+
+.regal_margin_top{
+    /*height: 100px;*/
+}
+
+.wrapper{
+    position:absolute;
+    top:10%;
+    left:5%;
+    right:5%;
+    bottom:0;
+    z-index:-1;
+}
