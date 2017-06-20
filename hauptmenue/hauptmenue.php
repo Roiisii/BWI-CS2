@@ -8,9 +8,19 @@
     </head>
     <body>
         <h1>Wir sind angemeldet!</h1>
-        <button type="button" class="btn btn-danger btn-sm pull-right" id="logout" data-hover="tooltip" title="Logout" data-placement="bottom">
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
+        <div class="container col-md-2">    
+            <div class="row">
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <li class="nav-divider"></li>
+                        <li><a href="javascript:;"><i class="glyphicon glyphicon-heart"></i> Artikel</a></li>
+                        <li><a href="javascript:;"><i class="glyphicon glyphicon-inbox"></i> Lagerorte</a></li>
+                        <li><a href="javascript:;"><i class="glyphicon glyphicon-file"></i> Bestellscheine</a></li>
+                        <li><a href="javascript:;"><i class="glyphicon glyphicon-user"></i> Benutzerverwaltung</i></a></li>
+                    </ul> 
+                </nav>
+            </div>
+        </div>
         <?php
         // put your code here
         ?>
