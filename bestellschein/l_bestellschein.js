@@ -11,5 +11,5 @@ $(document).ready(function() {
 //Hier mit onClick:
 function detail(){
     //alert("test");
-    $('#exampleText2').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
+    //$('#value1').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
 }

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+<?php
+    require '../libraries/connection.php';
+?>
+
 <!-- DB connect
 $host = "localhost";
 $username = "root";

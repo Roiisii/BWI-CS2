@@ -1,4 +1,7 @@
 <!-- Datenbank einbinden -->
+<?php
+    require '../libraries/connection.php';
+?>
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="detailModal">
@@ -10,14 +13,16 @@
       </div>
       <div class="modal-body">
           
-        <p> Bestellschein </p>
-        <p id="exampleText"> Nummer </p>
-        <p id="exampleText2"> Date </p>
+        <p id="value1"> Nummer </p>
+        <p id="value2"> Datum </p>
+        <p id="value3"> Dummy </p>
+        <p id="value4"> Dummy </p>
+        <p id="value5"> Dummy </p>
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+        <button type="button" class="btn btn-primary" data-dismiss="modal"> Close </button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
