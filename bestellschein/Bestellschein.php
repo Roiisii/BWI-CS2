@@ -35,9 +35,10 @@ while ($zeile = $result->fetch_object()){
         
         <table class="table table-striped">
             <tr>
-                <th> Datum </th> <!-- Wo ist das Lieferdatum in der DB ? -->
-                <th> Bestellnummer </th>
-                <th> Details </th>
+                <th> Status </th> <!-- Wo ist das Lieferdatum in der DB ? -->
+                <th> Bestellschein </th>
+                <th> Lieferant </th>
+                <th> Betelldatum </th>
             </tr>
             
             <!-- Testanzeigewerte -->
