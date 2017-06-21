@@ -35,9 +35,9 @@ while ($zeile = $result->fetch_object()){
         
         <table class="table table-striped">
             <tr>
-                <th> Datum </th>
+                <th> Datum </th> <!-- Wo ist das Lieferdatum in der DB ? -->
                 <th> Bestellnummer </th>
-                <th> Detail </th>
+                <th> Details </th>
             </tr>
             
             <!-- Testanzeigewerte -->

@@ -13,10 +13,10 @@
       </div>
       <div class="modal-body">
           
-        <p id="value1"> Nummer </p>
-        <p id="value2"> Datum </p>
-        <p id="value3"> Dummy </p>
-        <p id="value4"> Dummy </p>
+        <p id="value1"> Bestellscheinnummer </p> <!-- lbid? -->
+        <p id="value2"> Erstellungsdatum </p>
+        <p id="value3"> Bestätigungsdatum </p>
+        <p id="value4"> Zahlungsdatum </p>
         <p id="value5"> Dummy </p>
         
       </div>
