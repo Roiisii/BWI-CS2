@@ -1,6 +1,6 @@
 <!-- Datenbank einbinden -->
 <?php
-    require '../libraries/connection.php';
+   //require '../libraries/connection.php';
 ?>
 
 
@@ -13,16 +13,33 @@
       </div>
       <div class="modal-body">
           
-        <p id="value1"> Bestellscheinnummer </p> <!-- lbid? -->
-        <p id="value2"> Erstellungsdatum </p>
-        <p id="value3"> Bestätigungsdatum </p>
-        <p id="value4"> Zahlungsdatum </p>
-        <p id="value5"> Dummy </p>
+        <p id="value1"> Lieferant: </p> <!-- lbid? -->
+        <p id="value2"> Lieferdatum: </p>
+        <p id="value3"> Bestellposten: </p>
+        
+        <table class="table table-striped">
+            <tr>
+                <th> Pos </th>
+                <th> Bezeichnung </th>
+                <th> Menge </th>
+                <th> Erhalten </th>
+                
+            </tr>
+            
+            <!-- Testanzeigewerte -->
+            <tr>
+                <td> Test 1 </td>
+                <td> Test 2 </td>
+                <td> Test 3 </td>
+                <td> <input type="checkbox" value="erhalten"> </td>
+            </tr>
+
+        </table>
         
       </div>
       <div class="modal-footer">
-        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-        <button type="button" class="btn btn-primary" data-dismiss="modal"> Close </button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span> </button>
+        <button type="button" class="btn btn-primary" id="save" onClick="save()"> <span class="glyphicon glyphicon-ok"></span> </button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

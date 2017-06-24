@@ -13,3 +13,8 @@ function detail(){
     //alert("test");
     //$('#value1').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
 }
+
+function save(){
+    alert("test");
+    //$('#save').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
+}

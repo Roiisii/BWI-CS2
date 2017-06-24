@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    require '../libraries/connection.php';
+    //require '../libraries/connection.php';
 ?>
 
 <!-- DB connect
@@ -38,13 +38,17 @@ while ($zeile = $result->fetch_object()){
                 <th> Status </th> <!-- Wo ist das Lieferdatum in der DB ? -->
                 <th> Bestellschein </th>
                 <th> Lieferant </th>
-                <th> Betelldatum </th>
+                <th> Bestelldatum </th>
+                <th> Detail </th>
+                
             </tr>
             
             <!-- Testanzeigewerte -->
             <tr>
-                <td> Test 1 </td>
+                <td> <?php echo html_entity_decode("&#9899") ?> </td>
                 <td> Test 2 </td>
+                <td> Test 3 </td>
+                <td> Test 4 </td>
                 <td> <button type="button" class="btn btn-primary btn-sm" onClick="detail()" data-toggle="modal" data-target="#detailModal"> Detail </button> </td>
             </tr>
         
