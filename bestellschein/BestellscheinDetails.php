@@ -38,7 +38,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span> </button>
+        <button type="button" class="btn btn-primary pull-left" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span> </button>
         <button type="button" class="btn btn-primary" id="save" onClick="save()"> <span class="glyphicon glyphicon-ok"></span> </button>
       </div>
     </div><!-- /.modal-content -->
