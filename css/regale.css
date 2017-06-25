@@ -32,3 +32,8 @@
 .lager_glyph {
     font-size: 50px;
 }
+
+.lager_change_button{
+    background-color: transparent;
+    border-color: transparent;
+}
