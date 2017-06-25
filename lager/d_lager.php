@@ -1,30 +1,54 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>        
-        <?php include('../libraries/csslibrary.php'); ?>      
-        <link href="../css/regale.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <div class="wrapper">
-                <div class="row regal_margin_top"></div>
-                <div class="row">
-                    <div class="col-md-12 gesamt">
-                        <div class="regal regal_top"></div>
-                        <div class="regal regal_middle"></div>
-                        <div class="regal regal_bottom"></div>
-                    </div>                
-                </div>
-            </div>
+<link href="../css/regale.css" rel="stylesheet">
+<div class="lager_container">
+    <div class="row lager_reihe lager_quer_linie">
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
         </div>
-
-        <?php
-        // put your code here
-        ?>        
-        <?php include('../libraries/jslibrary.php'); ?>    
-        <script src="../lager/l_lager.js"></script>
-    </body>
-</html>
-
+        <div class="col-md-4 lager_fach_mitte">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row lager_reihe lager_quer_linie">
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-md-4 lager_fach_mitte">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row lager_reihe">
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-md-4 lager_fach_mitte">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="col-md-4 lager_fach">
+            <button type="button" class="lager_fach_button">
+                <span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</div>        

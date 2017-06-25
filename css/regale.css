@@ -1,36 +1,34 @@
-.regal {
-background-color: #000000;
-/*position: absolute;*/
-height: 10px;
-width: 100%;
-top: 20px;
+.lager_container{
+    height: 80%;
+    width: 90%;
+    /*border : 1px solid red;*/
 }
 
-.regal_top {
-top: 20px;
+.lager_reihe{
+    height: 33%;    
 }
 
-.regal_middle {
-top: 20px;
+.lager_fach{
+    height: 100%;
+    border-left: 3px solid lightsteelblue;
+    border-right: 3px solid lightsteelblue;
 }
 
-.regal_bottom {
-top: 20px;
+.lager_fach_mitte{
+    height: 100%;    
 }
 
-.gesamt{
-    border: 5px solid red;
+.lager_quer_linie{
+    border-bottom: 3px solid lightsteelblue;
 }
 
-.regal_margin_top{
-    /*height: 100px;*/
+.lager_fach_button{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
 }
 
-.wrapper{
-    position:absolute;
-    top:10%;
-    left:5%;
-    right:5%;
-    bottom:0;
-    z-index:-1;
+.lager_glyph {
+    font-size: 50px;
 }
