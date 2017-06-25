@@ -8,6 +8,10 @@ var _choosedRegal = {
     regalNr : 1
 };
 
+var _clickedFach = {
+    fach : -1,
+    id : -1
+};
 
 $('#regalChangeRight').click(function(){
    if(regalCounter < 9){
@@ -36,8 +40,9 @@ $('#regalChangeLeft').click(function(){
 });
 
 $('.lager_fach_button').click(function(){
-   console.log((this).id); 
-   alert("new Item for "+regalCounter+(this).id);
+   console.log("new Item for "+regalCounter+(this).id);
+   _clickedFach.fach = regalCounter+(this).id;
+   
 });
 
 function getArticles(){    
@@ -48,8 +53,7 @@ function getArticles(){
         dataType: "json",
         data: _choosedRegal,
         cache: false,
-        success: function (data) {            
-            console.log(data);
+        success: function (data) {                        
             loadArticles(data.DBValues);
         },
         error: function (data) {
@@ -63,7 +67,7 @@ function loadArticles(articles){
     for (var i = 0; i < articles.length; i++) {
         //alert(articles[i]);
         console.log($('#'+articles[i][1].substr(1,2)));
-        $('#'+articles[i][1].substr(1,2)).html(displayedArticle(articles[i][0]));
+        $('#'+articles[i][1].substr(1,2)).removeAttr("data-toggle").removeAttr("data-target").html(displayedArticle(articles[i][0]));
     }
 };
 
@@ -75,6 +79,6 @@ function displayedArticle(titel){
 
 function resetArticles(){
     $('.lager_container').find(':button').each(function(){
-        $(this).html('<span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>');
+        $(this).attr("data-toggle", "modal").attr("data-target", "#Artikel").html('<span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>');
     })
 }
