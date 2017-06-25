@@ -1,30 +1,45 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>        
-        <?php include('../libraries/csslibrary.php'); ?>        
-        <?php include('../login/s_isLoggedIn.php'); ?>
-    </head>
-    <body>
-        <h1>Wir sind angemeldet!</h1>
-        <div class="container col-md-2">    
-            <div class="row">
-                <nav class="nav-sidebar">
-                    <ul class="nav">
-                        <li class="nav-divider"></li>
-                        <li><a href="javascript:;"><i class="glyphicon glyphicon-heart"></i> Artikel</a></li>
-                        <li><a href="javascript:;"><i class="glyphicon glyphicon-inbox"></i> Lagerorte</a></li>
-                        <li><a href="javascript:;"><i class="glyphicon glyphicon-file"></i> Bestellscheine</a></li>
-                        <li><a href="javascript:;"><i class="glyphicon glyphicon-user"></i> Benutzerverwaltung</i></a></li>
-                    </ul> 
-                </nav>
+<?php
+
+//session_start();
+//$_SESSION['login'] = 1;
+
+include ("header.php");
+include ("../config/db.php");
+include ("../utility/DB.class.php");
+
+
+$template = handleNavigation('section');
+
+function handleNavigation($param) {
+    if (isset($_GET[$param])) {
+        switch ($_GET[$param]) {
+            case 'auftrag':
+                return "../auftrag/d_auftrag.php";
+            case 'lager':
+                return "../lager/d_lager.php";
+            case 'order':
+                return "../bestellschein/Bestellschein.php";
+            case 'article':
+                return "main.php";
+            case 'user':
+                return "main.php";
+            default: return "main.php";
+        }
+    }
+}
+
+?>
+<div class="container-fluid">
+<div class="row">
+        <div class="col-md-2">
+            <?php include ("navigation.php"); ?>    
+        </div> 
+        <div class="col-md-10">
+            <div class='row'>
+                <?php include ($template); ?>
             </div>
         </div>
-        <?php
-        // put your code here
-        ?>
-        <?php include('../libraries/jslibrary.php'); ?>      
-        <script src="../login/l_logOut.js"></script>
-    </body>
-</html>
+    </div>   
+</div> 
+
+<?php include ("footer.php") ;?>
