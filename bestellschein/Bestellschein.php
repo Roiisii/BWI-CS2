@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    //require '../libraries/connection.php';
+    require '../libraries/connection.php';
 ?>
 
 <!-- DB connect
@@ -24,6 +24,7 @@ while ($zeile = $result->fetch_object()){
         <title> Bestellscheine </title>
         <link rel="stylesheet" href="../css/custom.css">
         <?php include('../libraries/csslibrary.php'); ?>
+        <style>  </style>
     </head>
     <body>
         <?php
@@ -45,7 +46,7 @@ while ($zeile = $result->fetch_object()){
             
             <!-- Testanzeigewerte -->
             <tr>
-                <td> <?php echo html_entity_decode("&#9899") ?> </td>
+                <td class="test1"> <?php echo html_entity_decode("&#9899") ?> </td>
                 <td> Test 2 </td>
                 <td> Test 3 </td>
                 <td> Test 4 </td>

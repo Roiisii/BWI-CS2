@@ -1,6 +1,6 @@
 <!-- Datenbank einbinden -->
 <?php
-   //require '../libraries/connection.php';
+   require '../libraries/connection.php';
 ?>
 
 
