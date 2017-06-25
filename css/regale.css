@@ -10,8 +10,8 @@
 
 .lager_fach{
     height: 100%;
-    border-left: 3px solid lightsteelblue;
-    border-right: 3px solid lightsteelblue;
+    border-left: 10px solid lightsteelblue;
+    border-right: 10px solid lightsteelblue;
 }
 
 .lager_fach_mitte{
@@ -19,7 +19,7 @@
 }
 
 .lager_quer_linie{
-    border-bottom: 3px solid lightsteelblue;
+    border-bottom: 10px solid lightsteelblue;
 }
 
 .lager_fach_button{
@@ -36,4 +36,9 @@
 .lager_change_button{
     background-color: transparent;
     border-color: transparent;
+}
+
+.glyphicon-trash{
+    margin-top: 10px;
+    color: indianred;
 }
