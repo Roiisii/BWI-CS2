@@ -8,16 +8,21 @@ if (isset($_POST['userName']) === true && empty($_POST['userName']) === false &&
     $_pass = $db->real_escape_string($_POST['password']);
     $username = "";
 
-    $ergebnis = $db->query("SELECT * FROM benutzer WHERE UPPER(benutzername) = '$_userName' AND passwort = '$_pass'");
-    
+    $ergebnis = $db->query("SELECT passwort FROM benutzer WHERE UPPER(benutzername) = '$_userName'");
+
     if (!$ergebnis) {
         $meldung = mysqli_error($db);
     } else if (mysqli_num_rows($ergebnis) == 1) {
         $row = $ergebnis->fetch_array();
-        $username = $row[10];
-        $meldung = "OK";
-        session_start();
-        $_SESSION['login'] = 1;
+        if (password_verify($_pass, $row[0])) {
+            $username = $_userName;
+            $meldung = "OK";
+            session_start();
+            $_SESSION['login'] = 1;
+        }
+        else{
+            $meldung = "nOK";
+        }
     } else {
         $meldung = "nOK";
     }
