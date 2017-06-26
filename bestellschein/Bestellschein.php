@@ -70,7 +70,7 @@ while ($zeile = $result->fetch_object()){
                 echo "<td> $zeile->lbid </td>";
                 echo "<td> $zeile->name </td>";
                 echo "<td> $zeile->datum_erstellung </td>";
-                echo "<td> <button type='button' class='btn btn-primary btn-sm' onClick='detail()' data-toggle='modal' data-target='#detailModal'> Detail </button> </td>";
+                echo "<td> <button type='button' class='btn btn-primary btn-sm' onClick='detail()' data-toggle='modal' data-target='#detailModal'>  Detail  </button> </td>";
                 echo "</tr>";
             }
         

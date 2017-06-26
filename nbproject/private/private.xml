@@ -14,6 +14,7 @@
         <group>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/BWI-CS2/bestellschein/BestellscheinDetails.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/BWI-CS2/bestellschein/l_bestellschein.js</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/BWI-CS2/libraries/connection.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/BWI-CS2/bestellschein/Bestellschein.php</file>
         </group>
     </open-files>

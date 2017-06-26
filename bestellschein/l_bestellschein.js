@@ -2,7 +2,6 @@ $(document).ready(function() {
     console.log( "ready!" );
 });
 
-
 //Wenn mit ID gearbeitet wird dann das:
 /*$('#details').click(function () {
     alert("Click!");
@@ -12,6 +11,7 @@ $(document).ready(function() {
 function detail(){
     //alert("test");
     //$('#value1').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
+    
 }
 
 function save(){
