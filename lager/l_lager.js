@@ -37,26 +37,30 @@ $('#regalChangeLeft').click(function () {
     getArticles();
 });
 
-$('.lager_fach_button').click(function () {
+$('.lager_fach_button').click(function () {    
     console.log("new Item for " + regalCounter + (this).id);
     _clickedFach.fach = regalCounter + (this).id;
     
-    $(this).has("h3").each(function(){
-        var _deletePlatz = {platz: regalCounter + (this).id};        
+    
+    $(this).has("h3").each(function () {
+        var _deletePlatz = {platz: regalCounter + (this).id};
         $.ajax({
-        type: "POST",
-        url: "../lager/s_deleteLager.php",
-        dataType: "json",
-        data: _deletePlatz,
-        cache: false,
-        success: function (data) {
-            getArticles();
-        },
-        error: function (data) {
-            alert("Ein schwerwiegender Fehler ist aufgetreten!");
-        }
+            type: "POST",
+            url: "../lager/s_deleteLager.php",
+            dataType: "json",
+            data: _deletePlatz,
+            cache: false,
+            success: function (data) {
+                getArticles();
+            },
+            error: function (data) {
+                alert("Ein schwerwiegender Fehler ist aufgetreten!");
+            }
+        });
     });
-    });
+    
+    loadUnplacedArticles();
+    
 });
 
 function getArticles() {
@@ -77,7 +81,7 @@ function getArticles() {
 }
 
 function loadArticles(articles) {
-
+    
     for (var i = 0; i < articles.length; i++) {
         //alert(articles[i]);
         //console.log($('#' + articles[i][1].substr(1, 2)));
@@ -97,3 +101,44 @@ function resetArticles() {
         $(this).attr("data-toggle", "modal").attr("data-target", "#Artikel").html('<span class="glyphicon glyphicon-plus lager_glyph" aria-hidden="true"></span>');
     })
 }
+
+function loadUnplacedArticles() {
+    $.ajax({
+        type: "POST",
+        url: "../lager/s_getUnplacedArticles.php",
+        dataType: "json",
+        //data: _deletePlatz,
+        cache: false,
+        success: function (data) {
+            console.log(data);
+            var eintraege = "";
+            for (var i = 0; i < data.DBValues.length; i++) {
+                eintraege += '<h4><input type="radio" name="artikel" value="'+ data.DBValues[i][1]+'"> '+data.DBValues[i][0]+'<h4>';
+            }
+            $('#placeArticles').html(eintraege);
+        },
+        error: function (data) {
+            alert("Ein schwerwiegender Fehler ist aufgetreten!");
+        }
+    });
+}
+
+$('#btn_save').click(function(){
+    
+    _clickedFach.id = $('input[name=artikel]:checked', '#placeArticles').val();        
+    
+    $.ajax({
+            type: "POST",
+            url: "../lager/s_storeLager.php",
+            dataType: "json",
+            data: _clickedFach,
+            cache: false,
+            success: function (data) {
+                getArticles();
+                $('#Artikel').modal('toggle');
+            },
+            error: function (data) {
+                alert("Ein schwerwiegender Fehler ist aufgetreten!");
+            }
+        });
+});
