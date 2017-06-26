@@ -46,7 +46,7 @@ while ($zeile = $result->fetch_object()){
             
             <!-- Testanzeigewerte 
             <tr>
-                <td class="test1"> <?php //echo html_entity_decode("&#9899") ?> </td>
+                <td class="test1">  //echo html_entity_decode("&#9899") </td>
                 <td> Test 2 </td>
                 <td> Test 3 </td>
                 <td> Test 4 </td>
@@ -58,14 +58,15 @@ while ($zeile = $result->fetch_object()){
         // korrekten Werte
         
         $abfrage = "SELECT lbid, datum_erstellung, name FROM lieferantenbestellung" 
-                 . " JOIN lieferant on lieferantenbestellung.lid = lieferant.lid";
+                 . " JOIN lieferant on lieferantenbestellung.lid = lieferant.lid"
+                .  " ORDER BY lbid";
         $result = $db->query($abfrage);
         
         
           
             while ($zeile = $result->fetch_object()){
                 echo "<tr>";
-                echo "<td class='test1'> &#9899 </td>";
+                echo "<td class='status'> &#9899 </td>";
                 echo "<td> $zeile->lbid </td>";
                 echo "<td> $zeile->name </td>";
                 echo "<td> $zeile->datum_erstellung </td>";

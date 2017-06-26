@@ -33,6 +33,28 @@
                 <td> Test 3 </td>
                 <td> <input type="checkbox" value="erhalten"> </td>
             </tr>
+            
+        <?php
+        // korrekten Werte
+            $abfrage = "SELECT lbid, datum_erstellung, name FROM lieferantenbestellung" 
+            . " JOIN lieferant on lieferantenbestellung.lid = lieferant.lid"
+            .  " ORDER BY lbid";
+            $result = $db->query($abfrage);
+        
+        
+          
+            while ($zeile = $result->fetch_object()){
+                echo "<tr>";
+                echo "<td class='status'> &#9899 </td>";
+                echo "<td> $zeile->lbid </td>";
+                echo "<td> $zeile->name </td>";
+                echo "<td> $zeile->datum_erstellung </td>";
+                echo "<td> <button type='button' class='btn btn-primary btn-sm' onClick='detail()' data-toggle='modal' data-target='#detailModal'> Detail </button> </td>";
+                echo "</tr>";
+            }
+        
+        
+        ?>
 
         </table>
         

@@ -12,3 +12,8 @@ and open the template in the editor.
     margin-top: 50px;
     height: 50px;
 }
+
+
+#status {
+    color: red;
+}
