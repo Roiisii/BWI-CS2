@@ -55,7 +55,7 @@ $('.lager_fach_button').click(function () {
                 location.reload();
             },
             error: function (data) {
-                alert("Ein schwerwiegender Fehler ist aufgetreten!");
+                alert("Ein schwerwiegender Fehler ist aufgetreten! - lager_fach_button.click()");
             }
         });
     });
@@ -76,7 +76,7 @@ function getArticles() {
             loadArticles(data.DBValues);
         },
         error: function (data) {
-            alert("Ein schwerwiegender Fehler ist aufgetreten! Bitte Seite aktualisieren");
+            alert("Ein schwerwiegender Fehler ist aufgetreten! Bitte Seite aktualisieren - getArticles()");
         }
     });
 }
@@ -119,7 +119,7 @@ function loadUnplacedArticles() {
             $('#placeArticles').html(eintraege);
         },
         error: function (data) {
-            alert("Ein schwerwiegender Fehler ist aufgetreten!");
+            alert("Ein schwerwiegender Fehler ist aufgetreten! - loadUnplacedArticles()");
         }
     });
 }
@@ -139,7 +139,7 @@ $('#btn_save').click(function(){
                 $('#Artikel').modal('toggle');
             },
             error: function (data) {
-                alert("Ein schwerwiegender Fehler ist aufgetreten!");
+                alert("Ein schwerwiegender Fehler ist aufgetreten! - btn_save.click()");
             }
         });
 });
