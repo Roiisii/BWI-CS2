@@ -44,30 +44,37 @@ while ($zeile = $result->fetch_object()){
                 
             </tr>
             
-            <!-- Testanzeigewerte -->
+            <!-- Testanzeigewerte 
             <tr>
-                <td class="test1"> <?php echo html_entity_decode("&#9899") ?> </td>
+                <td class="test1"> <?php //echo html_entity_decode("&#9899") ?> </td>
                 <td> Test 2 </td>
                 <td> Test 3 </td>
                 <td> Test 4 </td>
-                <td> <button type="button" class="btn btn-primary btn-sm" onClick="detail()" data-toggle="modal" data-target="#detailModal"> Detail </button> </td>
-            </tr>
+                <td> <button type='button' class='btn btn-primary btn-sm' onClick='detail()' data-toggle='modal' data-target='#detailModal'> Detail </button> </td>
+            </tr>-->
         
-        <!-- korrekten Werte vorbereitet -->
-        <!--
+
         <?php
-        /*  
+        // korrekten Werte
+        
+        $abfrage = "SELECT lbid, datum_erstellung, name FROM lieferantenbestellung" 
+                 . " JOIN lieferant on lieferantenbestellung.lid = lieferant.lid";
+        $result = $db->query($abfrage);
+        
+        
+          
             while ($zeile = $result->fetch_object()){
                 echo "<tr>";
-                echo "<td> $zeile->wert1 </td>";
-                echo "<td> $zeile->wert2 </td>";
-                echo "<td> $zeile->wert3 </td>";
-                echo "<td> $zeile->wert4 </td>";
+                echo "<td class='test1'> &#9899 </td>";
+                echo "<td> $zeile->lbid </td>";
+                echo "<td> $zeile->name </td>";
+                echo "<td> $zeile->datum_erstellung </td>";
+                echo "<td> <button type='button' class='btn btn-primary btn-sm' onClick='detail()' data-toggle='modal' data-target='#detailModal'> Detail </button> </td>";
                 echo "</tr>";
-            }*/
+            }
         
         ?>   
-        -->
+        
         </table>
         </div>
         <?php include('../libraries/jslibrary.php'); ?>
