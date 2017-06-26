@@ -51,7 +51,8 @@ $('.lager_fach_button').click(function () {
             data: _deletePlatz,
             cache: false,
             success: function (data) {
-                getArticles();
+                //getArticles();
+                location.reload();
             },
             error: function (data) {
                 alert("Ein schwerwiegender Fehler ist aufgetreten!");
@@ -75,7 +76,7 @@ function getArticles() {
             loadArticles(data.DBValues);
         },
         error: function (data) {
-            alert("Ein schwerwiegender Fehler ist aufgetreten!");
+            alert("Ein schwerwiegender Fehler ist aufgetreten! Bitte Seite aktualisieren");
         }
     });
 }

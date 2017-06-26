@@ -22,7 +22,7 @@ function handleNavigation($param) {
             case 'article':
                 return "main.php";
             case 'user':
-                return "main.php";
+                return "../benutzer/d_benutzer_view.php";
             default: return "main.php";
         }
     }
