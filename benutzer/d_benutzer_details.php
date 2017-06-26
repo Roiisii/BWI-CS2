@@ -9,13 +9,7 @@
             <div class="modal-body">               
                 <div class="tab-content">                    
                         <label for="bname">Benutzername</label>
-                        <input type="text" class="form-control" id="bname" placeholder="Benutzername"></br>
-
-                        <label for="passwort">Passwort</label>
-                        <input type="password" class="form-control" id="passwort" placeholder="Passwort"></br>
-
-                        <label for="passwortwh">Passwort wiederholen</label>
-                        <input type="password" class="form-control" id="passwortwh" placeholder="Passwort wiederholen"></br>
+                        <input type="text" class="form-control" id="bname" placeholder="Benutzername"></br>                        
 
                         <label for="email">E-Mail</label>
                         <input type="text" class="form-control" id="email" placeholder="E-Mail"></br>
@@ -25,13 +19,19 @@
 
                         <label for="nachname">Nachname</label>
                         <input type="text" class="form-control" id="nachname" placeholder="Nachname"></br>                                            
+                        
+                        <label for="passwort">Passwort</label>
+                        <input type="password" class="form-control" id="passwort" placeholder="Passwort"></br>
+
+                        <label for="passwortwh">Passwort wiederholen</label>
+                        <input type="password" class="form-control" id="passwortwh" placeholder="Passwort wiederholen"></br>
 
                     <div class="alert alert-danger MarTop10" role="alert" style="display: none;" id="UserEdit_error"></div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
-                <button type="button" class="btn btn-success" id="bearbeiten">Speichern</button>
+                <button type="button" class="btn btn-success" id="btn_save">Speichern</button>
             </div>
         </div>
     </div>

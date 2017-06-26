@@ -11,5 +11,6 @@
     </div>
 </div>
 
-<script src="../benutzer/l_benutzer_view.js"></script>
 <?php include("../benutzer/d_benutzer_details.php");?>
+
+<script src="../benutzer/l_benutzer_view.js"></script>
