@@ -99,6 +99,8 @@ $('#btn_save').click(function () {
                 } else {
                     $('#benutzer_bearbeiten').modal('toggle');
                     $('#UserEdit_error').toggle();
+                    clearAllTextboxes();
+                    createUserTable();
                 }
             },
             error: function (data) {
@@ -108,6 +110,11 @@ $('#btn_save').click(function () {
 
     }
 });
+
+$('#userAdd').click(function(){
+    userMode = 0;
+    clearAllTextboxes();
+})
 
 function validUserData() {
     var returnMessage = "";
@@ -134,3 +141,7 @@ function validUserData() {
     return returnMessage;
 }
 ;
+
+function clearAllTextboxes(){
+    $('#benutzer_bearbeiten input:text').val("");
+}
