@@ -10,14 +10,16 @@ if (isset($_POST['id'])) {
     $data = '<table class="table table-bordered table-striped">
         <tr>
             <th>Titel</th>
+            <th>pid</th>
             <th>Anzahl</th>
             <th>Status</th>
         </tr>';
-    $results = DB::getAuftraegeProduct($id);
 
+    $results = DB::getBestellungDetail($id);
     foreach ($results as $result) {
         $data .= '<tr>
             <td>' . $result->titel . '</td>
+            <td>' . $result->pid . '</td>
             <td>' . $result->anzahl . '</td>';
             if ($result->status == 1) {
                 $data .= '<td><input class="states" checked="true" type="checkbox" data-id='.$id.' value='. $result->pid . '></td>'; 

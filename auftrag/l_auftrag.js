@@ -1,6 +1,5 @@
 $(function () {
     $('#save').click(function () {
-        //$select_value = $("#exampleSelect").value();
         
         var datas = [];
         $(".states").each(function () {
@@ -8,11 +7,15 @@ $(function () {
             var checked = $(this).prop('checked');
             var pid = $(this).val();
             var kbid = $(this).attr('data-id');
-
+            var status = 0;
+            
+            if(checked)
+                status = 1;
+            
             console.log(pid);
             console.log(checked);
             
-            datas.push( {id: pid, kid: kbid, status: checked} );
+            datas.push( {id: pid, kid: kbid, status: status} );
         });
 
         console.log(datas);
@@ -22,11 +25,11 @@ $(function () {
             data: {datas: datas},
             success: function (data) {
                 console.log(data);
-                //alert(data);
+                window.location.reload();
             }
         });
 
-        $('#detailModal').modal('hide');
+        //$('#detailModal').modal('hide');
         //window.location.reload();
     });
 });

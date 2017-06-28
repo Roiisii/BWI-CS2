@@ -12,24 +12,23 @@ if (isset($_POST['datas'])) {
     foreach ($results as $result) {
         //$data = var_dump($result);
         $pid = $result['id'];
-        $kid = $result['kid'];
+        $lid = $result['lid'];
         $status = $result['status'];
 
-        $data = DB::updateProduktStatus($status, $pid, $kid);
+        $data = DB::updateBestellung($status, $pid, $lid);
         
         if ($status  == 1) {
             $count++;
         }
-    }
+    } 
     
     $products = count($results);
     
     if ($products == $count) {
-        $send = DB::setVersendet($kid);
+        $send = DB::setOrder($lid);
     } else {
-         $send = DB::resetVersendet($kid); 
+         $send = DB::resetOrder($lid); 
     }
-    
 }
-echo $data;
+echo $send
 ?>

@@ -1,20 +1,53 @@
-$(document).ready(function() {
-    console.log( "ready!" );
+$(function () {
+    $('#save').click(function () {
+        
+        var datas = [];
+        $(".states").each(function () {
+
+            var checked = $(this).prop('checked');
+            var pid = $(this).val();
+            var lbid = $(this).attr('data-id');
+            var status = 0;
+            
+            if(checked)
+                status = 1;
+                
+            console.log(pid);
+            console.log(checked);
+            
+            datas.push( {id: pid, lid: lbid, status: status} );
+        });
+
+        console.log(datas);
+        $.ajax({
+            type: "POST",
+            url: "../bestellschein/a_update.php",
+            data: {datas: datas},
+            success: function (data) {
+                console.log(data);
+                window.location.reload();
+            }
+        });
+
+        //$('#detailModal').modal('hide');
+    });
 });
 
-//Wenn mit ID gearbeitet wird dann das:
-/*$('#details').click(function () {
-    alert("Click!");
-});*/
+$(function () {
+    $(".announce").click(function () {
+        $("#aname").text("Details zu Auftrag Nr #" + $(this).data('id'));
 
-//Hier mit onClick:
-function detail(){
-    //alert("test");
-    //$('#value1').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
-    
-}
+        var id = $(this).data('id');
 
-function save(){
-    alert("test");
-    //$('#save').val('Dieser Wert wurde mit JS hinzugefügt, nach einem Klick!');
-}
+        $.ajax({
+            type: "POST",
+            url: "../bestellschein/a_detail.php",
+            data: {id: id},
+            success: function (data) {
+                $(".records_content").html(data);
+            }
+        });
+    });
+});
+
+

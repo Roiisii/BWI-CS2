@@ -20,7 +20,9 @@ function handleNavigation($param) {
             case 'order':
                 return "../bestellschein/Bestellschein.php";
             case 'article':
-                return "main.php";
+                return "../artikel/d_artikel.php";
+            case 'articled':
+                return "../artikel/d_artikel_detail.php";
             case 'user':
                 return "../benutzer/d_benutzer_view.php";
             default: return "main.php";
@@ -34,7 +36,7 @@ function handleNavigation($param) {
         <div class="col-md-2">
             <?php include ("navigation.php"); ?>    
         </div> 
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div class='row'>
                 <?php include ($template); ?>
             </div>
